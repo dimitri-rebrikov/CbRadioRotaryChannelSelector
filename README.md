@@ -28,7 +28,22 @@ The electronic circuit I developed is based on the [answer in the electronic sta
     <img src="./circuit_diagram.svg" alt="circuit diagram SVG" >
 </a>
 
-## TODO: add circuit diagram explanation
+## Circuit Diagram Explanation
+- R1 provides the logical "1" to the contact C of the rotary switch with than during the rotation is provided to A and B.
+- R2, R3 set the default output of A and B to the logical "0"
+- U1A, U2B, U2C are the actual implementation of the left/right to down/up transcoder (see the [link](https://electronics.stackexchange.com/a/290684) for the explanation). 
+- The trigger signal from the contact A of the rotary encoder are not passed directly to the clock contact of the U1A flip-flop. Before that it is prepared by U3 und U4. This preparation is necessary to debounce the signal from the rotary switch but also to ensure the proper minimal signal to pause ratio for the CB radio input as otherwise the internal debouncing functionality of the CB radio will ignore the signals (for example if you rotate the switch too fast) 
+- U2A inverts the signal as the NE555 is triggered by the 1->0 transition
+- C1 and R4 reduces the length of the signal from the rotary encoder. Otherwise if the rotary switch turned very slowly or held in the middle position the up/down signal will be active for too long time leading to possible side effects (in case of my radio it triggers the channel scan)
+- U3, C2, R6, R7, C5 is a standard monostable timer circuit (see the [link](https://www.jameco.com/Jameco/workshop/TechTip/555-timer-tutorial.html)). It guarantees the length of the output up/down signal. It is activated by 0-1 transition of the A contact of the rotary switch and generated the clock signal of the guaranteed length for U1A, U2B, U2C. The length of signal is adjusted by the R7
+- C3, R5 are the same as C1 and R4 but for the U4
+- U4, C4, R8, R9, C6 are the same monostable timer as U3 & Co. but guarantee the length of the pause between the clock signals. It is activated by the 0->1 of the signal from U3 and block the U3 by putting its R(eset) contact to 0 for the time to pause. The length of the pause is adjusted by the R9 
+- U2D inverts the signal from U4 because the R input of the NE555 (U3) is activated by 0
+- R10, Q1 and R11, Q2 are the signal amplifier as the output of CD4011 cannot provide enough current to drive the relays. The R10 and R11 are calculated based on the current necessary for the relays to switch (see the [link](https://www.electronics-tutorials.ws/de/transistoren/transistors-als-schalter.html)) 
+- D1 and D2 just visualize the up/down signals. The are not necessary but very useful during the tuning/debugging of the circuit
+- D3, K1 and D4, K2 are the relays with the corresponding flywheel diodes
+- C7 stabilizes the power supply
+- C8 filters out the high frequency interferences
 
 # Implementation Pictures
 ![wiring](wiring.jpg)
