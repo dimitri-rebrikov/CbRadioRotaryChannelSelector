@@ -1,5 +1,7 @@
 # CbRadioRotaryChannelSelector
 ## DIY Rotary Channel Selector for a CB (Citizen Band) Radio embedded into a stand microphone.
+[Small YouTube Demo](https://youtu.be/qo1N41HTzeY)
+
 <img src="./stand_microphone.jpg" alt="circuit diagram" height="350" >
 <img src="./rotary_switch.jpg" alt="circuit diagram" height="350" >
 
