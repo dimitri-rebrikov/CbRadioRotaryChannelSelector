@@ -28,7 +28,23 @@ The electronic circuit I developed is based on the [answer in the electronic sta
     <img src="./circuit_diagram.svg" alt="circuit diagram SVG" >
 </a>
 
+## TODO: add circuit diagram explanation
+
 # Implementation Pictures
 ![wiring](wiring.jpg)
 ![circuit board front](circuit_board_front.jpg)
 ![circuit board back](circuit_board_back.jpg)
+
+## Sources used during development
+1. <https://electronics.stackexchange.com/questions/292334/telling-which-way-a-ky-040-rotary-encoder-has-been-turned>
+2. <https://www.ti.com/lit/ds/symlink/cd4013b.pdf>
+3. <https://www.ti.com/lit/ds/symlink/cd4011b.pdf>
+4. <https://html.alldatasheetde.com/html-pdf/550009/ONSEMI/BC327-16/217/1/BC327-16.html>
+5. <https://www.ti.com/lit/ds/symlink/ne555.pdf>
+6. <https://www.jameco.com/Jameco/workshop/TechTip/555-timer-tutorial.html>
+7. <https://www.mikrocontroller.net/articles/Transistor>
+8. <https://www.electronics-tutorials.ws/de/transistoren/transistors-als-schalter.html>
+9. <https://www.mikrocontroller.net/articles/Relais_mit_Logik_ansteuern>
+10. <https://www.reichelt.de/signalrelais-tr5v-m-12v-1-wechsler-2a-tr5v-m-12v-p101949.html>
+11. <https://de.elv.com/elv-inkrementalgeber-fuer-elv60ls-035388>
+12. [KiCad circuit diagram tutorial](https://youtu.be/AHlyiWntAKU)
