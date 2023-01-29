@@ -24,7 +24,7 @@ Although I have experience with ESPs an there are ready to use libraries for thi
 The electronic circuit I developed is based on the [answer in the electronic stack exchange](https://electronics.stackexchange.com/a/290684)
 
 # Circuit Diagram
-<a href="./circuit_diagram.svg" target="_blank">
+<a href="https://raw.githubusercontent.com/dimitri-rebrikov/CbRadioRotaryChannelSelector/main/circuit_diagram.svg" target="_blank">
     <img src="./circuit_diagram.svg" alt="circuit diagram SVG" >
 </a>
 
