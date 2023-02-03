@@ -45,6 +45,25 @@ The electronic circuit I developed is based on the [answer in the electronic sta
 - C7 stabilizes the power supply
 - C8 filters out the high frequency interferences
 
+## Connecting to the CB Radio
+The channel selector is connected to the CB radio over the external microphone plug.
+Probably you will build in the channel selector into the stand microphone and so reuse its plug.
+Use the CB radio documentation to find out which pins on plug you shall use and which additional electronic elements you need for the connection.
+Alternatively you can try to reverse engineer the original handheld microphone of the CB radio if it has the channel buttons.
+In my case the CB radio documentation was misleading but the reverse engineering of the handheld microphone pretty straightforward.
+Here is the circuit diagram of my handheld microphone:
+
+<a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/dimitri-rebrikov/CbRadioRotaryChannelSelector/main/handheld_microphone_vx-2412.svg">
+    <img src="./handheld_microphone_vx-2412.svg" alt="handheld microphone circuit diagram SVG" >
+</a>
+So to connect the channel selector to my CB radio I just connected the channel up relays to the PTT connection pins in series with 2K resistor and did the same for the channel down relays but over the 4K resistor.
+
+## Tuning
+After you successfully connected the channel selector to your CB radio you need to tune the both signal timers for the best performance.
+First you set both trim resistors R7 and R9 to max value.
+Now test the channel switching with the rotary knob in both direction with different rotation speeds.
+Reduce the values of the R7 and R9 as long as the channel switching does not "slip through" due to internal CB radio debouncing mechanism.
+
 # Implementation Pictures
 ![wiring](wiring.jpg)
 ![circuit board front](circuit_board_front.jpg)
