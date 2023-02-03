@@ -56,6 +56,7 @@ Here is the circuit diagram of my handheld microphone:
 <a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/dimitri-rebrikov/CbRadioRotaryChannelSelector/main/handheld_microphone_vx-2412.svg">
     <img src="./handheld_microphone_vx-2412.svg" alt="handheld microphone circuit diagram SVG" >
 </a>
+
 So to connect the channel selector to my CB radio I just connected the channel up relays to the PTT connection pins in series with 2K resistor and did the same for the channel down relays but over the 4K resistor.
 
 ## Tuning
